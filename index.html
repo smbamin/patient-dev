@@ -1,0 +1,14 @@
+<p id="demo"></p>
+
+<script>
+var myObj;
+var client = new XMLHttpRequest();
+client.open('GET', 'https://raw.githubusercontent.com/smbamin/patient-dev/main/patient.json');
+client.onreadystatechange = function() {
+  myObj = client.responseText;
+}
+// client.send();
+    
+var obj = JSON.parse(myObj);
+document.getElementById("demo").innerHTML = myObj;
+</script>
